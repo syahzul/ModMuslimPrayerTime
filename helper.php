@@ -136,8 +136,8 @@ class modMuslimPrayerTime {
 		$hijriYear	= 30 * $zn + $zj - 30;
 		
 		
-		$hijriMonthName = 'MOD_ESOLAT_MONTH_'.$theMonth;
-		$hijriDayString = 'MOD_ESOLAT_DAY_'.$wday;
+		$hijriMonthName = 'MOD_MUSLIMPRAYERTIME_MONTH_'.$theMonth;
+		$hijriDayString = 'MOD_MUSLIMPRAYERTIME_DAY_'.$wday;
 		
 
 		$hijiri = array(
