@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5"
+	client="site"
+	method="upgrade">
+	<name>mod_muslimprayertime</name>
+	<author>Syahril Zulkefli</author>
+	<creationDate>March 2012</creationDate>
+	<copyright>Copyright (C) 2013 Syahril Zulkefli. All rights reserved.</copyright>
+	<license>GNU General Public License version 3</license>
+	<authorEmail>syahzul@me.com</authorEmail>
+	<authorUrl>www.syahzul.com</authorUrl>
+	<version>1.0.0</version>
+	<description>MOD_MUSLIM_PRAYER_TIME_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_muslimprayertime">mod_muslimprayertime.php</filename>
+		<filename>index.html</filename>		
+        <filename>mod_muslimprayertime.xml</filename>
+        <folder>assets</folder>
+        <folder>elements</folder>
+        <folder>language</folder>
+        <folder>tmpl</folder>
+	</files>
+	<config>
+		<fields name="params">
+            <fieldset name="basic" addfieldpath="/modules/mod_muslimprayertime/elements">
+                <field
+                    name="zone" 
+                    type="zones"
+                    size="40"
+                    label="MOD_MUSLIM_PRAYER_TIME_FIELD_ZONES_LABEL"
+                    description="MOD_MUSLIM_PRAYER_TIME_FIELD_ZONES_DESC" />
+                
+                <field
+					name="show_today"
+					type="list"
+					default="1"
+					label="MOD_MUSLIM_PRAYER_TIME_FIELD_TODAY_LABEL"
+					description="MOD_MUSLIM_PRAYER_TIME_FIELD_TODAY_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+                
+                <field
+					name="show_zoneinfo"
+					type="list"
+					default="1"
+					label="MOD_MUSLIM_PRAYER_TIME_FIELD_ZONEINFO_LABEL"
+					description="MOD_MUSLIM_PRAYER_TIME_FIELD_ZONEINFO_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+                
+                <field
+					name="show_imsak"
+					type="list"
+					default="1"
+					label="MOD_MUSLIM_PRAYER_TIME_FIELD_IMSAK_LABEL"
+					description="MOD_MUSLIM_PRAYER_TIME_FIELD_IMSAK_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field
+					name="show_subuh"
+					type="list"
+					default="1"
+					label="MOD_MUSLIM_PRAYER_TIME_FIELD_SUBUH_LABEL"
+					description="MOD_MUSLIM_PRAYER_TIME_FIELD_SUBUH_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field
+					name="show_syuruk"
+					type="list"
+					default="1"
+					label="MOD_MUSLIM_PRAYER_TIME_FIELD_SYURUK_LABEL"
+					description="MOD_MUSLIM_PRAYER_TIME_FIELD_SYURUK_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field
+					name="show_zuhur"
+					type="list"
+					default="1"
+					label="MOD_MUSLIM_PRAYER_TIME_FIELD_ZUHUR_LABEL"
+					description="MOD_MUSLIM_PRAYER_TIME_FIELD_ZUHUR_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field
+					name="show_asar"
+					type="list"
+					default="1"
+					label="MOD_MUSLIM_PRAYER_TIME_FIELD_ASAR_LABEL"
+					description="MOD_MUSLIM_PRAYER_TIME_FIELD_ASAR_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field
+					name="show_maghrib"
+					type="list"
+					default="1"
+					label="MOD_MUSLIM_PRAYER_TIME_FIELD_MAGHRIB_LABEL"
+					description="MOD_MUSLIM_PRAYER_TIME_FIELD_MAGHRIB_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field
+					name="show_isyak"
+					type="list"
+					default="1"
+					label="MOD_MUSLIM_PRAYER_TIME_FIELD_ISYAK_LABEL"
+					description="MOD_MUSLIM_PRAYER_TIME_FIELD_ISYAK_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field
+					name="show_hijiri_date"
+					type="list"
+					default="1"
+					label="MOD_MUSLIM_PRAYER_TIME_FIELD_HIJIRI_LABEL"
+					description="MOD_MUSLIM_PRAYER_TIME_FIELD_HIJIRI_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+            </fieldset>
+            
+            <fieldset name="styles">
+                <field
+					name="use_css"
+					type="list"
+					default="1"
+					label="MOD_MUSLIM_PRAYER_TIME_FIELD_CSS_LABEL"
+					description="MOD_MUSLIM_PRAYER_TIME_FIELD_CSS_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+            </fieldset>
+            
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

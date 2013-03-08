@@ -1,0 +1,41 @@
+/**
+ * @package		Joomla.Site
+ * @subpackage	mod_muslimprayertime
+ * @copyright	Copyright (C) 2013 Syahril Zulkefli. All rights reserved.
+ * @license		GNU General Public License version 3
+ */
+
+.mod_muslimprayertime {
+    padding-bottom: 10px;
+}
+
+.mod_muslimprayertime .zoneinfo-location,
+.mod_muslimprayertime .zoneinfo-state,
+.mod_muslimprayertime .hijiri-date {
+    text-align: center;
+}
+
+.mod_muslimprayertime .zoneinfo-location {
+    font-size: 80%;
+}
+
+.mod_muslimprayertime dt,
+.mod_muslimprayertime dd {
+    padding-bottom: 3px;
+    width: 47%;
+}
+
+.mod_muslimprayertime dt {
+    clear: both;
+    float: left;
+}
+
+.mod_muslimprayertime dd {
+    float: right;
+    text-align: right;
+}
+
+.mod_muslimprayertime .hijiri-date {
+    clear: both;
+    font-size: 140%;
+}
